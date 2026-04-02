@@ -1,4 +1,49 @@
  let rendezVous = JSON.parse(localStorage.getItem("rdv")) || [];
+const ACCESS_CODE = "1234";
+
+function afficherAuth() {
+  document.getElementById("adminSection").classList.add("hidden");
+  document.getElementById("authSection").classList.remove("hidden");
+}
+
+function afficherAdmin() {
+  document.getElementById("adminSection").classList.remove("hidden");
+  document.getElementById("authSection").classList.add("hidden");
+}
+
+function verifierAcces() {
+  let code = document.getElementById("accessCode").value.trim();
+  let message = document.getElementById("accessMessage");
+  if (code === ACCESS_CODE) {
+    sessionStorage.setItem("adminAuthorized", "true");
+    afficherAdmin();
+    message.textContent = "";
+  } else {
+    message.textContent = "Code invalide. Réessayez.";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (sessionStorage.getItem("adminAuthorized") === "true") {
+    afficherAdmin();
+  } else {
+    afficherAuth();
+  }
+
+  let accessBtn = document.getElementById("accessBtn");
+  if (accessBtn) {
+    accessBtn.addEventListener("click", verifierAcces);
+  }
+
+  let accessCodeInput = document.getElementById("accessCode");
+  if (accessCodeInput) {
+    accessCodeInput.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        verifierAcces();
+      }
+    });
+  }
+});
  
  function afficher() {
    let container = document.getElementById("liste");

@@ -17,7 +17,15 @@
   <a href="index.html">Afficher les créneaux (utilisateur)</a>
 </nav>
 
-<section class="admin">
+<section class="auth" id="authSection">
+  <h2>Accès responsable</h2>
+  <p>Entrez le code d'accès pour ajouter des créneaux.</p>
+  <input type="password" id="accessCode" placeholder="Code d'accès">
+  <button type="button" id="accessBtn">Valider</button>
+  <p id="accessMessage"></p>
+</section>
+
+<section class="admin hidden" id="adminSection">
   <h2>Ajouter un créneau (Responsable)</h2>
   <input type="date" id="date">
   <input type="time" id="heure">

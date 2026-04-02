@@ -73,3 +73,34 @@ body.dark .admin,
 body.dark .slot{
     background: #1e1e1e;
 }
+
+.hidden {
+    display: none;
+}
+
+.auth {
+    background: white;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.auth input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.auth button {
+    background: blue;
+    padding: 10px;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.auth #accessMessage {
+    margin-top: 10px;
+    color: red;
+}
