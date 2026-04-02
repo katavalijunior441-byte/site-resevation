@@ -6,7 +6,7 @@
   container.innerHTML = "";
 
 rendezVous.forEach(r => {
-    let div = document.CreateElement ("div"); 
+    let div = document.createElement("div");
     div.className = "slot";
     
     div.innerHTML = `

@@ -1,11 +1,11 @@
  let rendezVous = JSON.parse(localStorage.getItem("rdv")) || [];
  
  function afficher() {
-   let container = document.getElementById("container");
+   let container = document.getElementById("liste");
    container.innerHTML = "";
 
    rendezVous.forEach(r => {
-    let div = document.CreateElement ("div"); 
+    let div = document.createElement("div");
     div.className = "slot";
     
     div.innerHTML = `
@@ -21,7 +21,7 @@
    });
  }
 
- function ajouter() {
+ function ajouterCreneau() {
   let date = document.getElementById("date").value;
   let heure = document.getElementById("heure").value;
 
@@ -44,5 +44,6 @@
  function supprimer(id) {
      rendezVous = rendezVous.filter(r => r.id !== id);
      localStorage.setItem("rdv", JSON.stringify(rendezVous));
+    afficher();
  }
  afficher();
