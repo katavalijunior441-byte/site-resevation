@@ -5,7 +5,7 @@
   let container = document.getElementById("container");
   container.innerHTML = "";
 
-rendezVous.forEach(r => {
+  rendezVous.forEach(r => {
     let div = document.createElement("div");
     div.className = "slot";
     
@@ -60,7 +60,18 @@ rendezVous.forEach(r => {
 
     showMessage("Réservation réussie");
  }
+
+defineStorageListener();
 afficher();
+
+function defineStorageListener() {
+  window.addEventListener("storage", event => {
+    if (event.key === "rdv") {
+      rendezVous = JSON.parse(event.newValue) || [];
+      afficher();
+    }
+  });
+}
 
 function showMessage(text, type = "success") {
      let msg = document.createElement("div");
