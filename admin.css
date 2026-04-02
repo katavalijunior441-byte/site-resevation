@@ -1,0 +1,75 @@
+
+body{
+    margin: 0;
+    font-family: arial;
+    background: #f4f4f4;
+    transition: 0.3s;
+}
+
+header{
+background: #111;
+color: white;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+}
+
+#darkModeBtn{
+background: white;
+border: none;
+padding: 8px;
+cursor: pointer;
+}
+
+.admin{
+background: white;
+width: 300px;
+margin: 20px auto;
+padding: 20px;
+border-radius: 10px;
+}
+
+.admin input{
+width: 100%;
+margin-bottom: 10px;
+padding: 8px;
+}
+
+#liste{
+width: 300px;
+margin: auto;
+}
+
+.admin button{
+background: blue;
+padding: 10px;
+color: white;
+border: none;
+width: 100%;
+}
+
+.slot{
+background: white;
+margin: 10px 0;
+padding: 15px;
+border-radius: 10px;
+display: flex;
+justify-content: space-between;
+}
+
+.slot button{
+padding: 5px;
+border: none;
+color: white;
+cursor: pointer;
+}
+
+body.dark{
+background: #121212;
+color: white;
+}
+
+body.dark .admin,
+body.dark .slot{
+    background: #1e1e1e;
+}

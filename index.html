@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="utilisateur.css">
+    <title>Interdace utilisateur</title>
+</head>
+<body>
+
+<header>
+ Service de Réservation
+</header>
+
+<div class="container">
+    <h2>Créneaux disponibles</h2>
+  <div id="container"></div>
+ 
+  <hr>
+
+  <h2>Réserver un créneau</h2>
+ 
+  <p id="selectedSlot"> Aucun créneau sélectionné</p>
+  <input type="text" id="nomInput" placeholder="Votre nom">
+  <button onclick="confirmerReservation()">
+    Confirmer
+  </button>
+
+</div>
+
+<script src="utilisateur.js"></script>
+</body>
+</html>
