@@ -104,3 +104,24 @@ body.dark .slot{
     margin-top: 10px;
     color: red;
 }
+
+@media (max-width: 600px) {
+header {
+    font-size: 18px;
+    padding: 15px;
+}
+
+ .slot {
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 10px;
+ }   
+
+ button {
+     width: 100%;
+ }   
+
+  input {
+      width: 100%;
+  }  
+}
